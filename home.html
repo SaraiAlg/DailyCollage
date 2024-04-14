@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        33<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="homecss.css">
+        
+    </head>
+
+    <body>
+        <form>
+
+        
+        <header class="container-fluid position-relative">
+                <!-- Additional header with pages -->
+
+                <div class="long-box">
+                    <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
+                </div>
+
+                <div class="header-top bg-light py-2">
+                    <div class="container text-center align-items-center d-flex justify-content-between">
+                        <div class="float-left">
+                            <a href="#" class="header-link">Closet</a>
+                            <a href="#" class="header-link">Catalog</a>
+                            <a href="#" class="header-link">Profile</a>
+                            <a href="#" class="upgrade-link">Upgrade</a> <!-- Bold and italic -->
+                        </div>
+                        <div class="float-right d-flex align-items-center">
+                            <button class="btn btn-login rounded-pill">Login</button> <!-- Log in button -->
+                            <button class="btn btn-register rounded-pill">Register</button> <!-- Register button -->
+                        </div>
+                    </div>
+                </div>
+            <img src="bannerimg.jpg" alt="Banner">
+            
+            <div class="overlay"></div>
+            <div class="content text-center text-black">
+                <h1>Daily Fashion Collage Generator</h1>
+                <p>A quick way to match clothing pieces specific to your personality and what you already own.</p>
+                <a href="#" class="btn btn-custom rounded-pill">Get Started</a>
+            </div>
+        </header>
+        <div>
+            <img src="image.png" alt="Centered image" class="centered-image">
+        </div>
+
+        <p class="questions">What kind of occasion are you headed to?</p>
+
+        
+            
+        <div class="selections">
+            <button type="button" class="selection">
+                <img src="academic.jpg" alt="Academic">
+                <p>Academic</p>
+            </button>
+            <button type="button" class="selection">
+                <img src="aquatic.jpg" alt="Aquatic Facilities">
+                <p>Aquatic Facilities</p>
+                
+            </button>
+
+            <button type="button" class="selection">
+                <img src="athletic.jpg" alt="Athletic">
+                <p>Athletic</p>
+            </button>
+
+            <button type="button" class="selection">
+                <img src="casual.jpg" alt="casual">
+                <p>Casual</p>
+            </button>
+
+            <button type="button" class="selection">
+                <img src="formal.jpg" alt="formal">
+                <p>Formal</p>
+            </button>
+
+            <button type="button" class="selection">
+                <img src="errand.jpg" alt="Errand">
+                <p>Errand</p>
+            </button>
+
+            <button type="button" class="selection">
+                <img src="lounge.jpg" alt="lounge">
+                <p>Lounge</p>
+            </button>
+
+            
+        </div>
+
+        <p class="questions">What is the current season?</p>
+            <div class="selections">
+                <button  type="button" class="btn selection">Winter</button>
+                <button  type="button" class="btn selection">Summer</button>
+                <button  type="button" class="btn selection">Spring</button>
+                <button  type="button" class="btn selection">Fall</button>
+            </div>
+
+
+                
+
+
+        <div>
+            <p class="questions"> Select the aesthetic/style you’re aiming for: </p>
+
+            <div class="selections">
+                <button  type="button" class="btn selection">Academia + Vintage</button>
+                <button  type="button" class="btn selection">Sporty</button>
+                <button  type="button" class="btn selection">Romantic + coquette</button>
+                <button  type="button" class="btn selection">Streetwear</button>
+                <button  type="button" class="btn selection">Grunge</button>
+                <button  type="button" class="btn selection">Cottagecore</button>
+            </div>
+
+<div class="container mt-5">
+            <p class="questions"> Select some clothing pieces: </p>
+
+            <div class="selections" id="clothingSelections" class="btn-group">
+                <button  type="button" class="btn selection color-selectable">Dress</button>
+                <button  type="button" class="btn selection color-selectable">Skirt</button>
+                <button  type="button" class="btn selection color-selectable">Trousers</button>
+                <button  type="button" class="btn selection color-selectable">Shorts</button>
+                <button  type="button" class="btn selection color-selectable">Jeans</button>
+                <button  type="button" class="btn selection color-selectable">Hoodies</button>
+                <button  type="button" class="btn selection color-selectable">Coat</button>
+                <button  type="button" class="btn selection color-selectable">Cardigan</button>
+                <button type="button" class="btn selection color-selectable">Leggings</button>
+                <button type="button" class="btn selection color-selectable">Blouses</button>
+                <button type="button" class="btn selection color-selectable">T-shirt</button>
+                <button type="button" class="btn selection color-selectable">Sweatpants</button>
+                <button type="button" class="btn selection color-selectable">Sweater</button>
+                <button type="button" class="btn selection color-selectable">Jumpsuit</button>
+                <button type="button" class="btn selection color-selectable">One piece swimwear</button>
+                <button type="button" class="btn selection color-selectable">Bikini</button>
+                <button type="button" class="btn selection color-selectable">Vests</button>
+                <button type="button" class="btn selection color-selectable">Crop-top</button>
+                <button type="button" class="btn selection color-selectable">Tank-top</button>
+            </div>
+
+            <!-- <h3 class="mt-3">Chosen Color:</h3>
+        <select id="colorSelection" class="form-control" style="width: 200px; display: none;">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+        </select> -->
+
+        <!-- Color Selection Modal -->
+<div id="colorModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Select a color:</p>
+        <select id="colorSelection">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+        </select>
+        <button  type="button" id="saveColor">Save Color</button>
+    </div>
+</div>
+
+    </div>
+
+
+              
+
+</form>
+             
+    </body>
+    <script src="home.js"></script>
+</html>

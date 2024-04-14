@@ -1,0 +1,238 @@
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    position: relative;
+    /*padding-top: 100px; /* Adjust top padding as needed */
+    text-align: center;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity as needed */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10%;
+    
+}
+
+.content h1,
+.content p {
+    margin: 0;
+}
+
+.content a {
+    margin-top: 20px; /* Adjust top margin for the button as needed */
+}
+
+.header-top{
+    width: 100%
+}
+
+
+
+
+.btn-login,btn-register{
+    margin-left: 10px;
+}
+
+.btn-login{
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 4px 8px;
+    width: auto;
+   
+}
+
+.btn-login:hover{
+    text-decoration: underline;
+    color: lightseagreen;
+}
+
+.btn-register {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    width: auto;
+}
+
+.btn-register:hover{
+    color: lightseagreen;
+    text-decoration: underline;
+}
+
+.upgrade-link {
+    font-weight: bold;
+    font-style: italic;
+    color:#000;
+}
+
+.upgrade-link:hover{
+    color:lightseagreen;
+}
+
+/* styles.css */
+.btn-custom {
+    background-color:black; /* Change to your desired color */
+    color: #ffffff; /* Change to your desired text color */
+    border-color: black; /* Change to match the background color if needed */
+}
+
+.btn-custom:hover {
+    background-color: hsl(0, 0%, 18%); /* Change to a darker shade for hover effect */
+    color:white
+    /*border-color: hsl(0, 0%, 18%); /* Change to match the background color if needed */
+}
+
+.float-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-link{
+    margin-right: 25px;
+    color: #000;
+}
+
+.header-link:hover{
+    text-decoration: underline;
+    color:lightseagreen;
+}
+
+.long-box {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.long-box-text {
+    margin: 0;
+}
+
+
+.centered-image {
+    max-width: 30%;
+    max-height: 100%;
+    display: block;
+    margin: 2px auto 0;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+
+.questions{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+.selections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+
+
+.selection {
+        width: 175px; /* Set fixed width */
+        height: 175px; /* Set fixed height */
+        margin: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 25;
+        border: none;
+    
+}
+
+.selection img {
+    width: 100px;
+    height: 100px;
+    border-radius: 40%;
+    margin-bottom: 10px;
+}
+
+.selections p {
+    font-size: px; /* Change the font size as needed */
+}
+
+.seasons{
+    
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 25;
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
