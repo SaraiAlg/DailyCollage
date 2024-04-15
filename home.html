@@ -21,6 +21,7 @@
                 <div class="float-left">
                     <a href="" class="header-link">Catalog</a>
                     <a href="search.html" class="header-link">Search</a>
+                    <a href="home.html" class="header-link">Home quiz</a>
                     <a href="Upgrade.html" class="upgrade-link">Upgrade</a> 
                 </div>
                 <div class="float-right d-flex align-items-center">
@@ -44,134 +45,101 @@
         
 
         <div class="container mt-4">
-            <p class="questions">What kind of occasion are you headed to?</p>
-            <div class="selections">
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Academic"> Academic
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Aquatic Facilities"> Aquatic Facilities
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Athletic"> Athletic
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Casual"> Casual
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Formal"> Formal
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Errand"> Errand
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="occasion" value="Lounge"> Lounge
-                </label>
-            </div>
-
-            <p class="questions">What is the current season?</p>
-            <div class="selections">
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="season" value="Winter"> Winter
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="season" value="Summer"> Summer
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="season" value="Spring"> Spring
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="season" value="Fall"> Fall
-                </label>
-            </div>
-
-            <p class="questions">Select the aesthetic/style you are aiming for:</p>
-            <div class="selections">
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Academia + Vintage"> Academia + Vintage
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Sporty"> Sporty
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Romantic + Coquette"> Romantic + Coquette
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Streetwear"> Streetwear
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Grunge"> Grunge
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="radio" name="style" value="Cottagecore"> Cottagecore
-                </label>
-            </div>
 
             <p class="questions">Select some clothing pieces:</p>
             <div class="selections" id="clothingSelections">
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Dress"> Dress
+                    <input type="checkbox" name="clothingPiece" value="dress"> Dress
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Skirt"> Skirt
+                    <input type="checkbox" name="clothingPiece" value="skirt"> Skirt
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Trousers"> Trousers
+                    <input type="checkbox" name="clothingPiece" value="trousers"> Trousers
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Shorts"> Shorts
+                    <input type="checkbox" name="clothingPiece" value="shorts"> Shorts
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Jeans"> Jeans
+                    <input type="checkbox" name="clothingPiece" value="jeans"> Jeans
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Hoodies"> Hoodies
+                    <input type="checkbox" name="clothingPiece" value="hoodie"> Hoodies
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Coat"> Coat
+                    <input type="checkbox" name="clothingPiece" value="coat"> Coat
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Cardigan"> Cardigan
+                    <input type="checkbox" name="clothingPiece" value="cardigan"> Cardigan
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Leggings"> Leggings
+                    <input type="checkbox" name="clothingPiece" value="leggings"> Leggings
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Blouses"> Blouses
+                    <input type="checkbox" name="clothingPiece" value="blouse"> Blouses
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="T-shirt"> T-shirt
+                    <input type="checkbox" name="clothingPiece" value="tShirt"> T-shirt
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Sweatpants"> Sweatpants
+                    <input type="checkbox" name="clothingPiece" value="sweatpants"> Sweatpants
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Sweater"> Sweater
+                    <input type="checkbox" name="clothingPiece" value="sweater"> Sweater
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Jumpsuit"> Jumpsuit
+                    <input type="checkbox" name="clothingPiece" value="onepiece"> One piece swimwear
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="One piece swimwear"> One piece swimwear
+                    <input type="checkbox" name="clothingPiece" value="bikini"> Bikini
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Bikini"> Bikini
+                    <input type="checkbox" name="clothingPiece" value="vest"> Vests
                 </label>
                 <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Vests"> Vests
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Crop-top"> Crop-top
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="checkbox" name="clothing[]" value="Tank-top"> Tank-top
+                    <input type="checkbox" name="clothingPiece" value="tanktop"> Tank-top
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <p class="questions">Select the footwear:</p>
+            <div class="selections">
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="footwear" value="slippers"> Slippers
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="footwear" value="heels"> Heels
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="footwear" value="loafers"> Loafers
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="footwear" value="sneakers"> Sneakers
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="footwear" value="boots"> Boots
+                </label>
+                
+            
+
+           
         </div>
+        <div id="errorDisplay" style="color: red; text-align: center;"></div>
+        <div style="text-align: center;">
+            <button id="generateButton" type="button" style="padding: 10px 20px; border: none; background-color: #000000; color: white;">
+                Generate
+              </button>
+              
+          </div>
+          
     </form>
+    <div id="errorDisplay" style="color: red; text-align: center;"></div>
+
+    <div id="imageDisplay"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="homefinal.js"></script>
+    
+    
 </body>
+
 </html>

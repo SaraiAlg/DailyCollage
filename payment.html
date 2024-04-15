@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fashion College - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet">
+  <link href="homecss.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="container-fluid position-relative">
+    <!-- Additional header with pages -->
+
+    <div class="long-box">
+        <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
+    </div>
+
+    <div class="header-top bg-light py-2">
+        <div class="container text-center align-items-center d-flex justify-content-between">
+            <div class="float-left">
+                <a href="" class="header-link">Catalog</a>
+                <a href="search.html" class="header-link">Search</a>
+                <a href="home.html" class="header-link">Home quiz</a>
+                <a href="Upgrade.html" class="upgrade-link">Upgrade</a> 
+            </div>
+            <div class="float-right d-flex align-items-center"> 
+                 <button onclick="location.href='logout.html';" class="btn btn-login rounded-pill">Logout</button> 
+            </div>
+        </div>
+    </div>
+<img src="bannerimg.jpg" alt="Banner">
+
+<div class="overlay"></div>
+<div class="content text-center text-black">
+    <h1>Daily Fashion Collage Generator</h1>
+    <p>A quick way to match clothing pieces specific to your personality and what you already own.</p>
+</div>
+</header>
+
+    
+    <main id="main">
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Checkout</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form action="#" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="form-group">
+                    <label for="paymentOption">Choose your payment option</label>
+                    <select id="paymentOption" name="paymentOption" required>
+                      <option value = "paypal">PayPal</option>
+                      <option value = "creditcard">Credit Card</option>
+                    </select>
+                  </div>
+                  <div id="creditCardInfo" style="display:none;">
+                    <div class="form-group">
+                        <label for="card">Card Number</label>
+                        <input type="text" class="form-control" name="card" id="card" placeholder="1111 1111 1111 1111" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry">Expiry</label>
+                        <input type="text" class="form-control" name="expiry" id="expiry" placeholder="MM/YY" required>
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-control" name="cvv" id="cvv" placeholder="123" required>
+                    </div>
+                  </div>
+                  <div class="text-center"><button type="submit">Submit</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer id="footer">
+      <!-- Footer content omitted for brevity -->
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#paymentOption').change(function() {
+          if ($(this).val() === 'creditcard') {
+            $('#creditCardInfo').show();
+          } else {
+            $('#creditCardInfo').hide();
+          }
+        });
+  
+        $('form').submit(function(e) {
+          var paymentType = $('#paymentOption').val();
+          var cardNumber = $('#card').val();
+          var expiry = $('#expiry').val();
+          var cvv = $('#cvv').val();
+          
+          if (paymentType === 'creditcard' && (cardNumber.length !== 16 || isNaN(cardNumber))) {
+            e.preventDefault();
+            alert('Please enter a valid card number');
+          }
+          if (paymentType === 'creditcard' && (!/^\d{2}\/\d{2}$/.test(expiry))) {
+            e.preventDefault();
+            alert('Please enter a valid expiry date');
+          }
+          if (paymentType === 'creditcard' && (cvv.length !== 3 || isNaN(cvv))) {
+            e.preventDefault();
+            alert('Please enter a valid CVV');
+          }
+        });
+      });
+    </script>
+  </body>
+  </html>

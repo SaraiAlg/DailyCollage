@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homecss.css">
+    
+</head>
+<body>
+
+    <header class="container-fluid position-relative">
+    
+        <div class="long-box">
+            <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
+        </div>
+    
+        <div class="header-top bg-light py-2">
+            <div class="container text-center align-items-center d-flex justify-content-between">
+                <div class="float-left">
+                    <a href="" class="header-link">Catalog</a>
+                    <a href="search.html" class="header-link">Search</a>
+                    <a href="Upgrade.html" class="upgrade-link">Upgrade</a> 
+                </div>
+                <div class="float-right d-flex align-items-center">
+                    <button class="btn btn-login rounded-pill">Login</button> 
+                     <button class="btn btn-register rounded-pill">Signup</button> 
+                     <button onclick="location.href='logout.html';" class="btn btn-login rounded-pill">Logout</button> 
+                </div>
+            </div>
+        </div>
+    <img src="bannerimg.jpg" alt="Banner">
+    
+    <div class="overlay"></div>
+    <div class="content text-center text-black">
+        <h1>Daily Fashion Collage Generator</h1>
+        <p>A quick way to match clothing pieces specific to your personality and what you already own.</p>
+        <a href="signup.html" class="btn btn-custom rounded-pill">Signup</a>
+    </div>
+    </header>
+
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loginForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                const email = $('#email').val();
+                const password = $('#password').val();
+
+                // Simple client-side validation example
+                if (email && password) {
+                    alert("Login attempt with:\nEmail: " + email + "\nPassword: " + password);
+                    // Here you would typically handle the login by sending data to the server
+                    // e.g., $.post('server_endpoint', {email: email, password: password});
+                } else {
+                    alert("Please fill in both email and password.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
