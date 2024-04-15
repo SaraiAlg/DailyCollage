@@ -1,174 +1,165 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        33<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>W</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="homecss.css">
-        
-    </head>
-
-    <body>
-        <form>
-
-        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homecss.css">
+    
+</head>
+<body>
+    <form id="quizForm" method="POST" action="quizsubmit.html">
         <header class="container-fluid position-relative">
-                <!-- Additional header with pages -->
-
-                <div class="long-box">
-                    <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
-                </div>
-
-                <div class="header-top bg-light py-2">
-                    <div class="container text-center align-items-center d-flex justify-content-between">
-                        <div class="float-left">
-                            <a href="#" class="header-link">Closet</a>
-                            <a href="#" class="header-link">Catalog</a>
-                            <a href="#" class="header-link">Profile</a>
-                            <a href="#" class="upgrade-link">Upgrade</a> <!-- Bold and italic -->
-                        </div>
-                        <div class="float-right d-flex align-items-center">
-                            <button class="btn btn-login rounded-pill">Login</button> <!-- Log in button -->
-                            <button class="btn btn-register rounded-pill">Register</button> <!-- Register button -->
-                        </div>
+            <div class="long-box">
+                <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
+            </div>
+            <div class="header-top bg-light py-2">
+                <div class="container text-center align-items-center d-flex justify-content-between">
+                    <div class="float-left">
+                        <a href="#" class="header-link">Closet</a>
+                        <a href="#" class="header-link">Catalog</a>
+                        <a href="#" class="header-link">Profile</a>
+                        <a href="#" class="upgrade-link">Upgrade</a>
+                    </div>
+                    <div class="float-right d-flex align-items-center">
+                        <button class="btn btn-login rounded-pill">Login</button>
+                        <button class="btn btn-register rounded-pill">Register</button>
                     </div>
                 </div>
+            </div>
             <img src="bannerimg.jpg" alt="Banner">
-            
-            <div class="overlay"></div>
-            <div class="content text-center text-black">
-                <h1>Daily Fashion Collage Generator</h1>
-                <p>A quick way to match clothing pieces specific to your personality and what you already own.</p>
-                <a href="#" class="btn btn-custom rounded-pill">Get Started</a>
-            </div>
         </header>
-        <div>
-            <img src="image.png" alt="Centered image" class="centered-image">
-        </div>
 
-        <p class="questions">What kind of occasion are you headed to?</p>
-
-        
-            
-        <div class="selections">
-            <button type="button" class="selection">
-                <img src="academic.jpg" alt="Academic">
-                <p>Academic</p>
-            </button>
-            <button type="button" class="selection">
-                <img src="aquatic.jpg" alt="Aquatic Facilities">
-                <p>Aquatic Facilities</p>
-                
-            </button>
-
-            <button type="button" class="selection">
-                <img src="athletic.jpg" alt="Athletic">
-                <p>Athletic</p>
-            </button>
-
-            <button type="button" class="selection">
-                <img src="casual.jpg" alt="casual">
-                <p>Casual</p>
-            </button>
-
-            <button type="button" class="selection">
-                <img src="formal.jpg" alt="formal">
-                <p>Formal</p>
-            </button>
-
-            <button type="button" class="selection">
-                <img src="errand.jpg" alt="Errand">
-                <p>Errand</p>
-            </button>
-
-            <button type="button" class="selection">
-                <img src="lounge.jpg" alt="lounge">
-                <p>Lounge</p>
-            </button>
-
-            
-        </div>
-
-        <p class="questions">What is the current season?</p>
+        <div class="container mt-4">
+            <p class="questions">What kind of occasion are you headed to?</p>
             <div class="selections">
-                <button  type="button" class="btn selection">Winter</button>
-                <button  type="button" class="btn selection">Summer</button>
-                <button  type="button" class="btn selection">Spring</button>
-                <button  type="button" class="btn selection">Fall</button>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Academic"> Academic
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Aquatic Facilities"> Aquatic Facilities
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Athletic"> Athletic
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Casual"> Casual
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Formal"> Formal
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Errand"> Errand
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="occasion" value="Lounge"> Lounge
+                </label>
             </div>
 
-
-                
-
-
-        <div>
-            <p class="questions"> Select the aesthetic/style you’re aiming for: </p>
-
+            <p class="questions">What is the current season?</p>
             <div class="selections">
-                <button  type="button" class="btn selection">Academia + Vintage</button>
-                <button  type="button" class="btn selection">Sporty</button>
-                <button  type="button" class="btn selection">Romantic + coquette</button>
-                <button  type="button" class="btn selection">Streetwear</button>
-                <button  type="button" class="btn selection">Grunge</button>
-                <button  type="button" class="btn selection">Cottagecore</button>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="season" value="Winter"> Winter
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="season" value="Summer"> Summer
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="season" value="Spring"> Spring
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="season" value="Fall"> Fall
+                </label>
             </div>
 
-<div class="container mt-5">
-            <p class="questions"> Select some clothing pieces: </p>
-
-            <div class="selections" id="clothingSelections" class="btn-group">
-                <button  type="button" class="btn selection color-selectable">Dress</button>
-                <button  type="button" class="btn selection color-selectable">Skirt</button>
-                <button  type="button" class="btn selection color-selectable">Trousers</button>
-                <button  type="button" class="btn selection color-selectable">Shorts</button>
-                <button  type="button" class="btn selection color-selectable">Jeans</button>
-                <button  type="button" class="btn selection color-selectable">Hoodies</button>
-                <button  type="button" class="btn selection color-selectable">Coat</button>
-                <button  type="button" class="btn selection color-selectable">Cardigan</button>
-                <button type="button" class="btn selection color-selectable">Leggings</button>
-                <button type="button" class="btn selection color-selectable">Blouses</button>
-                <button type="button" class="btn selection color-selectable">T-shirt</button>
-                <button type="button" class="btn selection color-selectable">Sweatpants</button>
-                <button type="button" class="btn selection color-selectable">Sweater</button>
-                <button type="button" class="btn selection color-selectable">Jumpsuit</button>
-                <button type="button" class="btn selection color-selectable">One piece swimwear</button>
-                <button type="button" class="btn selection color-selectable">Bikini</button>
-                <button type="button" class="btn selection color-selectable">Vests</button>
-                <button type="button" class="btn selection color-selectable">Crop-top</button>
-                <button type="button" class="btn selection color-selectable">Tank-top</button>
+            <p class="questions">Select the aesthetic/style you are aiming for:</p>
+            <div class="selections">
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Academia + Vintage"> Academia + Vintage
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Sporty"> Sporty
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Romantic + Coquette"> Romantic + Coquette
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Streetwear"> Streetwear
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Grunge"> Grunge
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="radio" name="style" value="Cottagecore"> Cottagecore
+                </label>
             </div>
 
-            <!-- <h3 class="mt-3">Chosen Color:</h3>
-        <select id="colorSelection" class="form-control" style="width: 200px; display: none;">
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-        </select> -->
+            <p class="questions">Select some clothing pieces:</p>
+            <div class="selections" id="clothingSelections">
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Dress"> Dress
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Skirt"> Skirt
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Trousers"> Trousers
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Shorts"> Shorts
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Jeans"> Jeans
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Hoodies"> Hoodies
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Coat"> Coat
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Cardigan"> Cardigan
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Leggings"> Leggings
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Blouses"> Blouses
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="T-shirt"> T-shirt
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Sweatpants"> Sweatpants
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Sweater"> Sweater
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Jumpsuit"> Jumpsuit
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="One piece swimwear"> One piece swimwear
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Bikini"> Bikini
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Vests"> Vests
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Crop-top"> Crop-top
+                </label>
+                <label class="btn btn-outline-primary">
+                    <input type="checkbox" name="clothing[]" value="Tank-top"> Tank-top
+                </label>
+            </div>
 
-        <!-- Color Selection Modal -->
-<div id="colorModal" class="modal" style="display:none;">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Select a color:</p>
-        <select id="colorSelection">
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-        </select>
-        <button  type="button" id="saveColor">Save Color</button>
-    </div>
-</div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </div>
+    </form>
 
-    </div>
-
-
-              
-
-</form>
-             
-    </body>
-    <script src="home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
 </html>
