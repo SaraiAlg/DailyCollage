@@ -7,7 +7,7 @@ const publicDirectoryPath = path.join(__dirname, 'public');
 const server = http.createServer((req, res) => {
     console.log('Request received for:', req.url);
 
-    let filePath = path.join(publicDirectoryPath, req.url === '/' ? 'index.html' : req.url);
+    let filePath = path.join(publicDirectoryPath, req.url === '/' ? 'welcome.html' : req.url);
 
     
     const extname = path.extname(filePath);
