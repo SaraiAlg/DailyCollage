@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Catalog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            margin-top: 20px;
+        }
+        #search-bar {
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="headerEx.css">
+</head>
+<body>
+    <header class="container-fluid position-relative">
+        <div class="long-box">
+            <p class="long-box-text">GET UNLIMITED COLLAGE GENERATING PER DAY</p>
+        </div>
+        <div class="header-top bg-light py-2">
+            <div class="container text-center align-items-center d-flex justify-content-between">
+                <div class="float-left">
+                    <a href="catalog.html" class="header-link">Catalog</a>
+                    <a href="Upgrade.html" class="upgrade-link">Upgrade</a> 
+                </div>
+                <div class="float-right d-flex align-items-center">
+                    <button class="btn btn-login rounded-pill">Login</button> 
+                    <button class="btn btn-register rounded-pill">Signup</button> 
+                    <button onclick="location.href='logout.html';" class="btn btn-login rounded-pill">Logout</button> 
+                </div>
+            </div>
+        </div>
+        <img src="bannerimg.jpg" alt="Banner">
+        <div class="overlay"></div>
+        <div class="content text-center text-black">
+            <h1>Daily Fashion Collage Generator</h1>
+            <p>Welcome to the collage/gallery! Click on more information to view details about the pieces</p>
+            <a href="home.html" class="btn btn-custom rounded-pill">Home quiz</a>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <input type="text" id="search-bar" class="form-control" placeholder="Search for clothing and footwear...">
+        <div class="row" id="catalog">
+            <!-- Dynamic content goes here -->
+        </div>
+    </div>
+
+    <!-- Modal for displaying more information -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Item Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>More details about the item...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const items = [
+                { type: 'dress', variations: 2, description: "Elegant and comfortable, suitable for both daywear and formal occasions." },
+                { type: 'skirt', variations: 2, description: "Available in various lengths and materials, perfect for any season." },
+                // Continue adding other items similarly
+                { type: 'trousers', variations: 2, description: "Ideal for casual and formal settings, available in several fabrics." },
+                { type: 'shorts', variations: 2, description: "Perfect for summer days or sporting activities, comfortable and stylish." },
+                { type: 'jeans', variations: 2, description: "Durable denim that fits well for casual wear and comes in various styles." },
+                { type: 'hoodie', variations: 2, description: "Soft and cozy, great for a relaxed look or for keeping warm." },
+                { type: 'coat', variations: 2, description: "Keeps you warm during the winter, available in various cuts and materials." },
+                { type: 'cardigan', variations: 2, description: "Light and versatile, perfect for layering during transitional weather." },
+                { type: 'leggings', variations: 1, description: "Stretchable and comfortable, suitable for workout sessions or casual wear." },
+                { type: 'blouse', variations: 2, description: "Flows well and can be dressed up or down, available in many designs." },
+                { type: 'tshirt', variations: 2, description: "A staple for any wardrobe, comes in countless styles and colors." },
+                { type: 'sweatpants', variations: 2, description: "Ideal for lounging or exercising, focusing on comfort and fit." },
+                { type: 'sweater', variations: 2, description: "Warm and cozy, perfect for chilly days." },
+                { type: 'onepiece', variations: 2, description: "All-in-one fashion, simple and elegant solution for any occasion." },
+                { type: 'bikini', variations: 2, description: "Beach essential, available in various patterns and fits." },
+                { type: 'vest', variations: 2, description: "Adds an extra layer of style to any outfit, suitable for all seasons." },
+                { type: 'tanktop', variations: 2, description: "Cool and casual, ideal for hot days or as an undergarment." },
+                { type: 'slippers', variations: 1, description: "Comfortable for indoor use, simple and soft." },
+                { type: 'heels', variations: 2, description: "Elevates any outfit, available in many heights and styles." },
+                { type: 'loafers', variations: 1, description: "Classic and comfortable footwear, suitable for casual or formal wear." },
+                { type: 'sneakers', variations: 2, description: "Versatile for all activities, blending comfort with style." },
+                { type: 'boots', variations: 1, description: "Durable for rough conditions and stylish enough for daily wear." }
+            ];
+
+            items.forEach(item => {
+                for (let i = 1; i <= item.variations; i++) {
+                    let cardHtml = `
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="images/${item.type}_${i}.jpg" class="card-img-top" alt="${item.type}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</h5>
+                                    <p class="card-text">${item.description}</p>
+                                    <button class="btn btn-primary info-btn" data-id="${item.type}_${i}">More Information</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    $('#catalog').append(cardHtml);
+                }
+            });
+
+            $('.info-btn').click(function() {
+                var itemId = $(this).data('id').split('_')[0];
+                var item = items.find(x => x.type === itemId);
+                $('#infoModalLabel').text('Item ' + itemId.charAt(0).toUpperCase() + itemId.slice(1));
+                $('#infoModal .modal-body').html(`<p>${item.description}</p>`);
+                $('#infoModal').modal('show');
+            });
+
+            $('#search-bar').on('keyup', function() {
+                var value = $(this).val().toLowerCase();
+                $("#catalog .card").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</body>
+</html>
