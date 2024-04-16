@@ -13,7 +13,7 @@ app.use(cookieParser());
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// MySQL database connection
+
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
